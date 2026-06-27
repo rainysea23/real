@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="refresh" content="3600"><title>전세 모니터링</title>
+<meta http-equiv="refresh" content="3600"><title>전세/매매 모니터링</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.6}
 .container{max-width:800px;margin:0 auto;padding:20px}
 header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:30px 20px;text-align:center;border-radius:12px;margin-bottom:24px;box-shadow:0 4px 15px rgba(102,126,234,.4)}
@@ -9,8 +9,8 @@ header .time{margin-top:12px;font-size:.85rem;background:rgba(255,255,255,.2);di
 .summary .total{font-size:1.2rem;font-weight:700;color:#667eea}
 .card{background:#fff;border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #667eea}
 .card.empty{border-left-color:#ffc107}.card.error{border-left-color:#dc3545}.card.has-listings{border-left-color:#28a745}
-.card h2{font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.badge{background:#667eea;color:#fff;font-size:.8rem;padding:2px 8px;border-radius:12px;font-weight:600}.badge-error{background:#dc3545}
+.card h2{font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{background:#667eea;color:#fff;font-size:.8rem;padding:2px 8px;border-radius:12px;font-weight:600}.badge-error{background:#dc3545}.badge-trade{background:#28a745;font-size:.75rem}
 .no-listing{font-size:.9rem}.error .no-listing{color:#dc3545}.empty .no-listing{color:#856404}
 table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem}
 th{background:#f8f9fa;padding:8px 6px;text-align:left;font-weight:600;border-bottom:2px solid #dee2e6;font-size:.8rem;color:#666}
@@ -19,11 +19,9 @@ td{padding:8px 6px;border-bottom:1px solid #f0f0f0}.price{color:#667eea;font-wei
 footer{text-align:center;padding:20px;color:#999;font-size:.8rem}
 @media(max-width:600px){.container{padding:10px}header{padding:20px 15px}table{font-size:.75rem}th,td{padding:6px 4px}}</style></head>
 <body><div class="container">
-<header><h1>🏠 전세 매물 모니터링</h1><p class="sub">공급면적 130m²(39평) 이상 · 청솔대원 / 청솔성원 / 동보</p>
-<div class="time">🕐 2026-06-27 20:30:34 KST (매시간 갱신)</div></header>
-<div class="summary"><span>📊 40평+ 전세</span><span class="total">0건</span></div>
-<div class="card error"><h2>🏢 동보 <span class="badge badge-error">오류</span></h2>
-                <p class="no-listing">JWT 토큰을 찾을 수 없습니다. (마지막 HTML: 0 bytes)</p><a href="https://new.land.naver.com/complexes/3739" class="link">보기 →</a></div><div class="card empty"><h2>🏢 청솔대원</h2>
-                <p class="no-listing">40평+ 전세 매물 없음</p><a href="https://new.land.naver.com/complexes/2915" class="link">보기 →</a></div><div class="card empty"><h2>🏢 청솔성원</h2>
-                <p class="no-listing">40평+ 전세 매물 없음</p><a href="https://new.land.naver.com/complexes/2952" class="link">보기 →</a></div>
+<header><h1>🏠 전세/매매 모니터링</h1><p class="sub">공급면적 130m²(39평) 이상 · 청솔대원 / 청솔성원 / 동보</p>
+<div class="time">🕐 2026-06-27 20:50:38 KST (매시간 갱신)</div></header>
+<div class="summary"><span>📊 40평+ 매물</span><span class="total">0건</span></div>
+<div class="card error"><h2>🏢 청솔대원 <span class='badge badge-trade'>전세</span> <span class="badge badge-error">오류</span></h2><p class="no-listing">JWT 토큰을 찾을 수 없습니다. (마지막 상태: 시간초과: HTTPSConnectionPool(host='m.land.naver.com', port=443): Read timed out. (read timeout=20), HTML: 0 bytes, direct_fallback: True)
+도움말: Oracle VM에서 Naver CDN 직접 접근이 차단되었을 수 있습니다. 모바일 relay 서버를 활성화하세요.</p><a href="https://new.land.naver.com/complexes/2915" class="link">보기 →</a></div><div class="card empty"><h2>🏢 청솔대원 <span class='badge badge-trade'>매매</span></h2><p class="no-listing">40평+ 매매 매물 없음</p><a href="https://new.land.naver.com/complexes/2915" class="link">보기 →</a></div><div class="card empty"><h2>🏢 청솔성원 <span class='badge badge-trade'>전세</span></h2><p class="no-listing">40평+ 전세 매물 없음</p><a href="https://new.land.naver.com/complexes/2952" class="link">보기 →</a></div><div class="card empty"><h2>🏢 청솔성원 <span class='badge badge-trade'>매매</span></h2><p class="no-listing">40평+ 매매 매물 없음</p><a href="https://new.land.naver.com/complexes/2952" class="link">보기 →</a></div><div class="card empty"><h2>🏢 동보 <span class='badge badge-trade'>전세</span></h2><p class="no-listing">40평+ 전세 매물 없음</p><a href="https://new.land.naver.com/complexes/3739" class="link">보기 →</a></div>
 <footer><p>🤖 자동 모니터링 | 데이터: 네이버 부동산</p></footer></div></body></html>
